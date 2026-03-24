@@ -5,27 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yachana Choudhary | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0b1120;color:#e2e8f0;scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
+body{
+background:#020617;
+color:#e2e8f0;
+}
+
+/* NAVBAR */
 nav{
 position:fixed;
-top:0;
 width:100%;
+top:0;
 background:#020617;
+padding:15px 10%;
 display:flex;
 justify-content:space-between;
-padding:15px 10%;
+border-bottom:1px solid #1e293b;
 z-index:1000;
 }
-nav h2{color:#38bdf8;}
-nav a{color:white;margin-left:20px;text-decoration:none;font-size:14px;}
 
-section{padding:100px 10%;}
+nav a{
+color:#94a3b8;
+margin-left:20px;
+text-decoration:none;
+}
 
+nav a:hover{color:#38bdf8;}
+
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -34,46 +45,93 @@ justify-content:center;
 align-items:center;
 text-align:center;
 }
-.hero h1{font-size:3rem;color:#38bdf8;}
-.hero p{margin-top:10px;color:#94a3b8;}
+
+.hero h1{
+font-size:3.5rem;
+color:#60a5fa;
+}
+
+.hero h2{
+margin-top:10px;
+color:#cbd5f5;
+}
+
+.hero p{
+margin-top:15px;
+color:#94a3b8;
+max-width:500px;
+}
 
 .btn{
-display:inline-block;
-margin:10px;
+margin-top:20px;
 padding:10px 20px;
-background:#38bdf8;
-color:black;
-border-radius:25px;
+border-radius:8px;
+background:#1e293b;
+color:#60a5fa;
+border:1px solid #334155;
 text-decoration:none;
-font-weight:bold;
+display:inline-block;
 }
 
+.btn:hover{
+background:#38bdf8;
+color:black;
+}
+
+/* SECTION STYLE (IMPORTANT FOR MATCH) */
+.section{
+padding:80px 10%;
+}
+
+.section h2{
+color:#60a5fa;
+margin-bottom:20px;
+}
+
+/* CARD STYLE (LIKE YOUR REFERENCE) */
+.box{
+border:1px solid #1e293b;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+transition:0.3s;
+background:#020617;
+}
+
+.box:hover{
+border-color:#38bdf8;
+transform:translateX(5px);
+}
+
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:15px;
 }
 
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:12px;
-transition:0.3s;
-}
-.card:hover{transform:translateY(-10px);background:#334155;}
-
+/* SKILLS */
 .skills span{
 display:inline-block;
-background:#38bdf8;
-color:black;
+border:1px solid #334155;
 padding:8px 12px;
 margin:5px;
-border-radius:20px;
+border-radius:6px;
 }
 
-img{width:100%;border-radius:10px;margin-top:10px;}
+/* IMAGE */
+img{
+width:100%;
+margin-top:10px;
+border-radius:8px;
+}
 
-footer{text-align:center;padding:20px;background:#020617;}
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #1e293b;
+}
 </style>
 </head>
 
@@ -81,65 +139,57 @@ footer{text-align:center;padding:20px;background:#020617;}
 
 <!-- NAVBAR -->
 <nav>
-<h2>Yachana</h2>
+<div>Yachana</div>
 <div>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
-<a href="#research">Research</a>
 <a href="#skills">Skills</a>
-<a href="#certificates">Certificates</a>
+<a href="#cert">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-<h1>Hi, I'm Yachana 👋</h1>
+<div class="hero">
+<h1>Yachana Choudhary</h1>
 <h2>Data Analyst</h2>
-<p>Turning data into insights using analytics, visualization & machine learning</p>
+<p>Transforming data into insights using analytics, visualization, and machine learning</p>
 
-<a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
-<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/" target="_blank">LinkedIn</a>
-</section>
+<a class="btn" href="resume.pdf">Download Resume</a>
+<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/">LinkedIn</a>
+</div>
 
 <!-- ABOUT -->
-<section id="about">
+<div class="section" id="about">
 <h2>About Me</h2>
+<div class="box">
 <p>
 Data Analyst skilled in Python, SQL, Power BI, Tableau, and Excel.
-Experienced in transforming complex datasets into actionable insights.
+Focused on extracting insights and solving real-world business problems using data.
 </p>
-</section>
+</div>
+</div>
 
 <!-- PROJECTS -->
-<section id="projects">
+<div class="section" id="projects">
 <h2>Projects</h2>
 
 <div class="grid">
 
-<div class="card"><h3>Walmart Sales Forecasting</h3><p>Time-series forecasting using Prophet & SARIMAX</p></div>
-<div class="card"><h3>Programmatic Advertising Analytics</h3><p>Analyzed CTR, ROI and built dashboards</p></div>
-<div class="card"><h3>Bias-Aware Resume Screening</h3><p>Fair AI-based hiring system</p></div>
-<div class="card"><h3>GenAI Knowledge Assistant</h3><p>Enterprise AI assistant</p></div>
-<div class="card"><h3>Zomato Data Analysis</h3><p>Insights on pricing and ratings</p></div>
-<div class="card"><h3>Fitness Data Analysis</h3><p>Decision support from health data</p></div>
-<div class="card"><h3>Cancer Prediction Model</h3><p>ML-based diagnosis system</p></div>
-<div class="card"><h3>Database Management UI</h3><p>Python-based interface</p></div>
+<div class="box">Walmart Sales Forecasting</div>
+<div class="box">Programmatic Advertising Analytics</div>
+<div class="box">Bias-Aware Resume Screening</div>
+<div class="box">GenAI Knowledge Assistant</div>
+<div class="box">Zomato Data Analysis</div>
+<div class="box">Fitness Data Decision Support</div>
+<div class="box">Cancer Diagnostic Modeling</div>
+<div class="box">Database Management Interface</div>
 
 </div>
-</section>
-
-<!-- RESEARCH -->
-<section id="research">
-<h2>Research</h2>
-<div class="card">
-<p><b>Satellite Signal Correction using TEC Modeling</b></p>
-<p>Worked on GNSS/IRNSS datasets and performed statistical analysis & visualization.</p>
 </div>
-</section>
 
 <!-- SKILLS -->
-<section id="skills">
+<div class="section" id="skills">
 <h2>Skills</h2>
 <div class="skills">
 <span>Python</span>
@@ -149,34 +199,34 @@ Experienced in transforming complex datasets into actionable insights.
 <span>Excel</span>
 <span>Machine Learning</span>
 </div>
-</section>
+</div>
 
-<!-- CERTIFICATES -->
-<section id="certificates">
-<h2>Certificates</h2>
+<!-- CERTIFICATE -->
+<div class="section" id="cert">
+<h2>Conference Certificate</h2>
 
-<div class="grid">
-
-<div class="card">
-<h3>INAC 2026 Conference</h3>
-<p>Poster Presentation – Smart Advertising</p>
+<div class="box">
+<p>Industry & Academia Confab 2026 – Poster Presentation</p>
 
 <img src="certificate.png">
 
 <br><br>
 
-<a class="btn" href="certificate.png" target="_blank">View Certificate</a>
+<a class="btn" href="certificate.png">View Certificate</a>
 </div>
 
 </div>
-</section>
 
 <!-- CONTACT -->
-<section id="contact">
+<div class="section" id="contact">
 <h2>Contact</h2>
+
+<div class="box">
 <p>Email: yachanachoudhary8@gmail.com</p>
 <p>LinkedIn: https://www.linkedin.com/in/yachana-choudhary/</p>
-</section>
+</div>
+
+</div>
 
 <footer>
 <p>© 2026 Yachana Choudhary</p>
