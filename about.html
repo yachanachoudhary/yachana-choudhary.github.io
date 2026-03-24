@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>About Me</title>
-</head>
-<body>
-    <section class="container">
-        <h1>About Me</h1>
+<nav class="nav-container">
+    <div class="logo">YC</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+</nav>
+
+<div class="breadcrumb">Home / About Me</div>
+
+<section class="container" style="display: flex; gap: 50px;">
+    <div style="flex: 2;">
+        <p>Numbers, patterns, and logic have always been my thing. Before Data Science, I spent <strong>4 years as a Mathematics, Computer, and Physics Tutor (2020-2024)</strong>. I’ve learned to break down complex problems and explain them clearly.</p>
+        <p>I have <strong>published 2 research papers</strong> in international journals, showcasing my ability to draw meaningful conclusions from data. Currently, I am pursuing my <strong>M.Sc. in Data Science & Analytics at Jain University</strong> with a <strong>CGPA of 8.053</strong>[cite: 3, 6].</p>
+        <p>I crave the challenge of getting deep into what most people overlook. Whether it's 100% bias elimination in AI or sales forecasting, I thrive in the unknown.</p>
+    </div>
+
+    <div style="flex: 1; border-left: 3px solid var(--accent); padding-left: 20px;">
         <h3>Education</h3>
-        <p><strong>M.Sc. Data Science & Analytics</strong> | Jain University [cite: 3, 83]</p>
-        <p><strong>B.Sc. Physics</strong> | Sambalpur University [cite: 49, 83]</p>
-        
-        <h3>Technical Skills</h3>
-        <div class="skill-container">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">SQL</span>
-            <span class="skill-badge">Power BI</span>
-            <span class="skill-badge">Machine Learning</span>
-        </div>
-    </section>
-</body>
-</html>
+        <p><strong>M.Sc. Data Science</strong><br>Jain University (Present)<br>CGPA: 8.053 [cite: 3, 6]</p>
+        <p><strong>B.Sc. Physics/Chemistry/Math</strong><br>Sambalpur University (2023)<br>CGPA: 7.38 [cite: 49]</p>
+        <a href="experience.html" style="background: var(--accent); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; display: inline-block; margin-top: 10px;">Here's My Experience!</a>
+    </div>
+</section>
