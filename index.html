@@ -1,57 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yachana Choudhary | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yachana Choudhary | Data Analyst Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f172a;color:#f1f5f9;}
+
+header{text-align:center;padding:100px 20px;background:linear-gradient(135deg,#1e293b,#0f172a);}
+header h1{font-size:3rem;color:#38bdf8;}
+header h2{margin-top:10px;}
+header p{margin-top:15px;color:#94a3b8;}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+border-radius:25px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{padding:60px 10%;}
+h2{color:#38bdf8;margin-bottom:20px;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+.skills span{
+display:inline-block;
+background:#38bdf8;
+color:black;
+padding:8px 12px;
+margin:5px;
+border-radius:20px;
+}
+
+img{width:100%;border-radius:10px;margin-top:10px;}
+
+footer{text-align:center;padding:20px;background:#020617;color:#94a3b8;}
+</style>
 </head>
+
 <body>
 
+<!-- HERO -->
 <header>
-    <h1>Yachana Choudhary</h1>
-    <p>Data Science Student | AI & Analytics Enthusiast</p>
+<h1>Hi, I'm Yachana 👋</h1>
+<h2>Data Analyst | Turning Data into Insights</h2>
+<p>Transforming data into actionable insights using analytics, visualization, and machine learning</p>
+
+<a class="btn" href="https://github.com/yachanachoudhary" target="_blank">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/" target="_blank">LinkedIn</a>
+<a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am passionate about transforming data into meaningful insights and building AI-driven solutions for real-world problems.</p>
+<!-- ABOUT -->
+<section>
+<h2>About Me</h2>
+<p>
+Data Analyst with strong skills in Python, SQL, Power BI, Tableau, and Excel.
+Experienced in transforming complex datasets into actionable insights through visualization,
+statistical analysis, and predictive modeling.
+</p>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
+<!-- EXPERIENCE -->
+<section>
+<h2>Experience</h2>
 
-    <div class="card">
-        <h3>Smart Advertising System</h3>
-        <p>Transforming traditional advertising into smart, data-driven solutions using machine learning.</p>
-    </div>
+<div class="card">
+<h3>HR & Data Analytics Intern – Med Tour Easy</h3>
+<p>Automated KPI extraction using Python, saving 5+ hours weekly and improving reporting efficiency.</p>
+</div>
 
-    <div class="card">
-        <h3>Gender Recognition AI</h3>
-        <p>Real-time gender detection system for adaptive advertising applications.</p>
-    </div>
+<div class="card">
+<h3>Research Intern – Jain University</h3>
+<p>Worked on satellite signal correction using TEC modeling and performed statistical data analysis & visualization.</p>
+</div>
 
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <p>Python | Pandas | Machine Learning | Data Visualization | SQL</p>
+<!-- PROJECTS -->
+<section>
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Walmart Sales Forecasting</h3>
+<p>Time-series forecasting using Prophet & SARIMAX models</p>
+</div>
+
+<div class="card">
+<h3>Programmatic Advertising Analytics</h3>
+<p>Analyzed CTR, ROI, CPC and built Power BI dashboards</p>
+</div>
+
+<div class="card">
+<h3>Bias-Aware Resume Screening</h3>
+<p>Built fair AI system removing bias from hiring process</p>
+</div>
+
+<div class="card">
+<h3>GenAI Knowledge Assistant</h3>
+<p>AI-based enterprise knowledge retrieval system</p>
+</div>
+
+<div class="card">
+<h3>Zomato Data Analysis</h3>
+<p>Analyzed pricing, ratings, and restaurant trends</p>
+</div>
+
+<div class="card">
+<h3>Fitness Data Analysis</h3>
+<p>Generated insights for health decision-making</p>
+</div>
+
+<div class="card">
+<h3>Cancer Prediction Model</h3>
+<p>Machine learning model for early disease detection</p>
+</div>
+
+<div class="card">
+<h3>Database Management UI</h3>
+<p>Python-based interface for efficient data handling</p>
+</div>
+
+</div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>LinkedIn: your-link</p>
+<!-- RESEARCH -->
+<section>
+<h2>Research</h2>
+<div class="card">
+<p><b>Satellite Signal Correction using TEC Modeling</b></p>
+<p>Worked on GNSS/IRNSS datasets to improve signal accuracy through statistical modeling and visualization.</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<span>Python</span>
+<span>SQL</span>
+<span>Power BI</span>
+<span>Tableau</span>
+<span>Excel</span>
+<span>Machine Learning</span>
+<span>Data Visualization</span>
+<span>Statistical Analysis</span>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<h2>Certifications</h2>
+<ul>
+<li>Google – Data Analytics & R Programming</li>
+<li>IBM – Machine Learning with Python</li>
+<li>University of Colorado – Probability for Data Science</li>
+<li>UC Santa Cruz – Bayesian Statistics</li>
+<li>Jain University – Big Data, SAS, NLP</li>
+</ul>
+</section>
+
+<!-- CERTIFICATE IMAGE -->
+<section>
+<h2>Conference Certificate</h2>
+<div class="card">
+<p>Industry & Academia Confab 2026 – Poster Presentation</p>
+<img src="certificate.png">
+<a class="btn" href="certificate.png" target="_blank">View Certificate</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<p>Email: yachanachoudhary8@gmail.com</p>
+<p>LinkedIn: https://www.linkedin.com/in/yachana-choudhary/</p>
 </section>
 
 <footer>
-    <p>© 2026 Yachana Choudhary</p>
+<p>© 2026 Yachana Choudhary | Data Analyst Portfolio</p>
 </footer>
 
 </body>
