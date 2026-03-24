@@ -1,10 +1,50 @@
-<div class="section">
-<h2>Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Yachana Choudhary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo">YC</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
 
-<div class="card">Walmart Sales Forecasting</div>
-<div class="card">Programmatic Advertising Analytics</div>
-<div class="card">Bias-Aware Resume Screening</div>
-<div class="card">GenAI Knowledge Assistant</div>
-<div class="card">Zomato Data Analysis</div>
+    <section class="container">
+        <h1>Technical Portfolio</h1>
+        
+        <button class="accordion">01. GenAI Enterprise Knowledge Assistant</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p><strong>Tools:</strong> Generative AI, RAG, FAISS [cite: 25, 29]</p>
+                <p>Created an AI tool that interprets company PDFs to provide immediate answers[cite: 28]. Employed a FAISS vector database to retrieve information from hundreds of pages in seconds[cite: 29].</p>
+            </div>
+        </div>
 
-</div>
+        <button class="accordion">02. Bias-Aware AI Resume Screening System</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p><strong>Tools:</strong> Python, NLP, Machine Learning [cite: 31, 38]</p>
+                <p>Developed a system to prioritize candidates while identifying gender and education bias[cite: 32, 35]. Achieved 100% bias elimination by automatically masking personal identifiers[cite: 99].</p>
+            </div>
+        </div>
+
+        <button class="accordion">03. Walmart Store Sales Forecasting</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p><strong>Tools:</strong> Python, Prophet, SARIMAX, Power BI [cite: 38, 43]</p>
+                <p>Analyzed weekly sales data to identify seasonal patterns[cite: 41]. Developed predictive models to project future revenue with high precision[cite: 43].</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
