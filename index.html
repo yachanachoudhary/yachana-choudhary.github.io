@@ -3,32 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yachana Choudhary | Data Analyst Portfolio</title>
+<title>Yachana Choudhary | Data Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0f172a;color:#f1f5f9;}
+body{background:#0b1120;color:#e2e8f0;scroll-behavior:smooth;}
 
-header{text-align:center;padding:100px 20px;background:linear-gradient(135deg,#1e293b,#0f172a);}
-header h1{font-size:3rem;color:#38bdf8;}
-header h2{margin-top:10px;}
-header p{margin-top:15px;color:#94a3b8;}
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+display:flex;
+justify-content:space-between;
+padding:15px 10%;
+z-index:1000;
+}
+nav h2{color:#38bdf8;}
+nav a{color:white;margin-left:20px;text-decoration:none;font-size:14px;}
+
+section{padding:100px 10%;}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.hero h1{font-size:3rem;color:#38bdf8;}
+.hero p{margin-top:10px;color:#94a3b8;}
 
 .btn{
 display:inline-block;
 margin:10px;
 padding:10px 20px;
-border-radius:25px;
 background:#38bdf8;
 color:black;
+border-radius:25px;
 text-decoration:none;
 font-weight:bold;
 }
-
-section{padding:60px 10%;}
-h2{color:#38bdf8;margin-bottom:20px;}
 
 .grid{
 display:grid;
@@ -39,14 +57,10 @@ gap:20px;
 .card{
 background:#1e293b;
 padding:20px;
-border-radius:15px;
+border-radius:12px;
 transition:0.3s;
 }
-
-.card:hover{
-transform:translateY(-10px);
-background:#334155;
-}
+.card:hover{transform:translateY(-10px);background:#334155;}
 
 .skills span{
 display:inline-block;
@@ -59,109 +73,73 @@ border-radius:20px;
 
 img{width:100%;border-radius:10px;margin-top:10px;}
 
-footer{text-align:center;padding:20px;background:#020617;color:#94a3b8;}
+footer{text-align:center;padding:20px;background:#020617;}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header>
-<h1>Hi, I'm Yachana 👋</h1>
-<h2>Data Analyst | Turning Data into Insights</h2>
-<p>Transforming data into actionable insights using analytics, visualization, and machine learning</p>
+<!-- NAVBAR -->
+<nav>
+<h2>Yachana</h2>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#skills">Skills</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<a class="btn" href="https://github.com/yachanachoudhary" target="_blank">GitHub</a>
-<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/" target="_blank">LinkedIn</a>
+<!-- HERO -->
+<section class="hero">
+<h1>Hi, I'm Yachana 👋</h1>
+<h2>Data Analyst</h2>
+<p>Turning data into insights using analytics, visualization & machine learning</p>
+
 <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
-</header>
+<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/" target="_blank">LinkedIn</a>
+</section>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
 <h2>About Me</h2>
 <p>
-Data Analyst with strong skills in Python, SQL, Power BI, Tableau, and Excel.
-Experienced in transforming complex datasets into actionable insights through visualization,
-statistical analysis, and predictive modeling.
+Data Analyst skilled in Python, SQL, Power BI, Tableau, and Excel.
+Experienced in transforming complex datasets into actionable insights.
 </p>
 </section>
 
-<!-- EXPERIENCE -->
-<section>
-<h2>Experience</h2>
-
-<div class="card">
-<h3>HR & Data Analytics Intern – Med Tour Easy</h3>
-<p>Automated KPI extraction using Python, saving 5+ hours weekly and improving reporting efficiency.</p>
-</div>
-
-<div class="card">
-<h3>Research Intern – Jain University</h3>
-<p>Worked on satellite signal correction using TEC modeling and performed statistical data analysis & visualization.</p>
-</div>
-
-</section>
-
 <!-- PROJECTS -->
-<section>
+<section id="projects">
 <h2>Projects</h2>
 
 <div class="grid">
 
-<div class="card">
-<h3>Walmart Sales Forecasting</h3>
-<p>Time-series forecasting using Prophet & SARIMAX models</p>
-</div>
-
-<div class="card">
-<h3>Programmatic Advertising Analytics</h3>
-<p>Analyzed CTR, ROI, CPC and built Power BI dashboards</p>
-</div>
-
-<div class="card">
-<h3>Bias-Aware Resume Screening</h3>
-<p>Built fair AI system removing bias from hiring process</p>
-</div>
-
-<div class="card">
-<h3>GenAI Knowledge Assistant</h3>
-<p>AI-based enterprise knowledge retrieval system</p>
-</div>
-
-<div class="card">
-<h3>Zomato Data Analysis</h3>
-<p>Analyzed pricing, ratings, and restaurant trends</p>
-</div>
-
-<div class="card">
-<h3>Fitness Data Analysis</h3>
-<p>Generated insights for health decision-making</p>
-</div>
-
-<div class="card">
-<h3>Cancer Prediction Model</h3>
-<p>Machine learning model for early disease detection</p>
-</div>
-
-<div class="card">
-<h3>Database Management UI</h3>
-<p>Python-based interface for efficient data handling</p>
-</div>
+<div class="card"><h3>Walmart Sales Forecasting</h3><p>Time-series forecasting using Prophet & SARIMAX</p></div>
+<div class="card"><h3>Programmatic Advertising Analytics</h3><p>Analyzed CTR, ROI and built dashboards</p></div>
+<div class="card"><h3>Bias-Aware Resume Screening</h3><p>Fair AI-based hiring system</p></div>
+<div class="card"><h3>GenAI Knowledge Assistant</h3><p>Enterprise AI assistant</p></div>
+<div class="card"><h3>Zomato Data Analysis</h3><p>Insights on pricing and ratings</p></div>
+<div class="card"><h3>Fitness Data Analysis</h3><p>Decision support from health data</p></div>
+<div class="card"><h3>Cancer Prediction Model</h3><p>ML-based diagnosis system</p></div>
+<div class="card"><h3>Database Management UI</h3><p>Python-based interface</p></div>
 
 </div>
 </section>
 
 <!-- RESEARCH -->
-<section>
+<section id="research">
 <h2>Research</h2>
 <div class="card">
 <p><b>Satellite Signal Correction using TEC Modeling</b></p>
-<p>Worked on GNSS/IRNSS datasets to improve signal accuracy through statistical modeling and visualization.</p>
+<p>Worked on GNSS/IRNSS datasets and performed statistical analysis & visualization.</p>
 </div>
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
 <h2>Skills</h2>
 <div class="skills">
 <span>Python</span>
@@ -170,42 +148,38 @@ statistical analysis, and predictive modeling.
 <span>Tableau</span>
 <span>Excel</span>
 <span>Machine Learning</span>
-<span>Data Visualization</span>
-<span>Statistical Analysis</span>
 </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section>
-<h2>Certifications</h2>
-<ul>
-<li>Google – Data Analytics & R Programming</li>
-<li>IBM – Machine Learning with Python</li>
-<li>University of Colorado – Probability for Data Science</li>
-<li>UC Santa Cruz – Bayesian Statistics</li>
-<li>Jain University – Big Data, SAS, NLP</li>
-</ul>
-</section>
+<!-- CERTIFICATES -->
+<section id="certificates">
+<h2>Certificates</h2>
 
-<!-- CERTIFICATE IMAGE -->
-<section>
-<h2>Conference Certificate</h2>
+<div class="grid">
+
 <div class="card">
-<p>Industry & Academia Confab 2026 – Poster Presentation</p>
+<h3>INAC 2026 Conference</h3>
+<p>Poster Presentation – Smart Advertising</p>
+
 <img src="certificate.png">
+
+<br><br>
+
 <a class="btn" href="certificate.png" target="_blank">View Certificate</a>
+</div>
+
 </div>
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
 <h2>Contact</h2>
 <p>Email: yachanachoudhary8@gmail.com</p>
 <p>LinkedIn: https://www.linkedin.com/in/yachana-choudhary/</p>
 </section>
 
 <footer>
-<p>© 2026 Yachana Choudhary | Data Analyst Portfolio</p>
+<p>© 2026 Yachana Choudhary</p>
 </footer>
 
 </body>
