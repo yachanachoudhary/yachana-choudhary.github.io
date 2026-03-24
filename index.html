@@ -2,44 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yachana Choudhary | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="nav-container">
         <div class="logo">YC</div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
-    <header class="container" style="text-align: center;">
-        <h1>Yachana Choudhary</h1>
-        <p style="color: var(--accent); font-size: 1.3rem;">Data Analyst | M.Sc. Data Science & Analytics [cite: 3, 66]</p>
-        <p>Adept at converting intricate datasets into practical business insights[cite: 70].</p>
+    <header class="hero-section">
+        <div class="container">
+            <h1>Yachana Choudhary</h1>
+            <p class="tagline">Data Analyst | M.Sc. Data Science & Analytics</p>
+            <p class="description">
+                Adept at converting intricate datasets into practical business insights via sophisticated visualization, 
+                statistical analysis, and automated reporting[cite: 70].
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:yachanachoudhary8@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </header>
 
-    <section class="container">
-        <h2>Featured Projects</h2>
-        <button class="accordion">GenAI Enterprise Knowledge Assistant</button>
+    <section id="portfolio" class="container">
+        <h2 class="section-title">Project Catalog (8)</h2>
+
+        <button class="accordion">01. GenAI Enterprise Knowledge Assistant</button>
         <div class="panel">
             <div class="panel-content">
-                Built an AI tool using RAG and FAISS to interpret company documents[cite: 25, 28, 29].
+                <p>Created an AI tool using RAG to interpret company PDFs and documents to provide immediate answers[cite: 28]. 
+                Employed a FAISS vector database to retrieve pertinent information within seconds[cite: 29].</p>
             </div>
         </div>
 
-        <button class="accordion">Bias-Aware AI Resume Screening</button>
+        <button class="accordion">02. Bias-Aware AI Resume Screening & Ranking</button>
         <div class="panel">
             <div class="panel-content">
-                Developed a system to eliminate recruitment bias by 100% using automated masking[cite: 31, 99].
+                <p>Developed a machine learning system to prioritize candidates while identifying gender and education bias[cite: 31, 35]. 
+                Achieved 100% bias elimination through automated masking of personal identifiers[cite: 99].</p>
+            </div>
+        </div>
+
+        <button class="accordion">03. Walmart Store Sales Analysis & Forecasting</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Analyzed weekly sales data utilizing Python (Pandas) to identify seasonal patterns[cite: 41]. 
+                Developed Prophet and SARIMAX time-series models to project future revenue with high precision[cite: 43].</p>
+            </div>
+        </div>
+
+        <button class="accordion">04. Programmatic Advertising Performance Analytics</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Analyzed simulated ad performance data (CTR, ROI, CPC) using SQL to process large log-level datasets and optimize revenue decisions[cite: 22, 23, 24].</p>
+            </div>
+        </div>
+
+        <button class="accordion">05. Cancer Data Diagnostic Modeling</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Utilized machine learning models to classify diagnostic health data, focusing on accuracy in medical outcome predictions.</p>
+            </div>
+        </div>
+
+        <button class="accordion">06. Database Management Interface (Python UI)</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Designed a custom user interface in Python to manage back-end database interactions and automate administrative record updates.</p>
+            </div>
+        </div>
+
+        <button class="accordion">07. Zomato Multivariate Data Analysis</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Performed statistical multivariate analysis on restaurant datasets to uncover trends in customer ratings, pricing, and location impact.</p>
+            </div>
+        </div>
+
+        <button class="accordion">08. Fitness Data Decision Support</button>
+        <div class="panel">
+            <div class="panel-content">
+                <p>Analyzed real-world fitness data to help understand user patterns and drive decision-making for health-tech platforms.</p>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <footer class="footer-purple">
+        <p>© Copyright <strong>Yachana</strong>. All Rights Reserved</p>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+
 </body>
 </html>
