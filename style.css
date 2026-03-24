@@ -1,64 +1,86 @@
 :root {
-    --bg: #0e1117;
-    --card: #161b22;
-    --accent: #58a6ff;
-    --text: #c9d1d9;
+    --bg-dark: #1a1025; /* Deep Purple Background */
+    --card-bg: #2d1b42; /* Lighter Purple for Cards */
+    --accent: #a855f7; /* Vibrant Purple Accent */
+    --text-main: #ffffff; /* Pure White Text */
+    --text-dim: #d1d5db; /* Light Gray for subtexts */
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
+    line-height: 1.6;
 }
 
+/* Navigation */
 .nav-container {
     display: flex;
     justify-content: space-between;
-    padding: 15px 50px;
-    background: #010409;
-    border-bottom: 1px solid #30363d;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #120a1c;
+    border-bottom: 2px solid var(--accent);
 }
 
-.nav-container ul { display: flex; list-style: none; }
-.nav-container li { margin-left: 20px; }
-.nav-container a { color: var(--text); text-decoration: none; font-weight: 600; }
+.nav-container ul { display: flex; list-style: none; margin: 0; }
+.nav-container li { margin-left: 25px; }
+.nav-container a { 
+    color: var(--text-main); 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: color 0.3s;
+}
+.nav-container a:hover { color: var(--accent); }
 
+/* Containers */
 .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
 
+/* Accordion Component */
 .accordion {
-    background-color: var(--card);
-    color: var(--accent);
+    background-color: var(--card-bg);
+    color: var(--text-main);
     cursor: pointer;
     padding: 20px;
     width: 100%;
-    border: 1px solid #30363d;
+    border: 1px solid var(--accent);
     text-align: left;
     font-size: 1.1rem;
-    margin-top: 10px;
-    border-radius: 6px;
+    margin-top: 15px;
+    border-radius: 8px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.accordion:hover, .active {
+    background-color: var(--accent);
+    color: white;
 }
 
 .panel {
-    background-color: #0d1117;
+    background-color: rgba(255, 255, 255, 0.05);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    padding: 0 20px;
+    transition: max-height 0.3s ease-out;
+    border-radius: 0 0 8px 8px;
 }
 
-.skill-grid span {
-    background: #238636;
+.panel-content { padding: 20px; color: var(--text-dim); }
+
+/* Skills & Timeline */
+.skill-badge {
+    background: var(--accent);
     color: white;
-    padding: 5px 12px;
+    padding: 5px 15px;
     border-radius: 20px;
-    margin: 5px;
     display: inline-block;
+    margin: 5px;
+    font-size: 0.9rem;
 }
 
 .timeline-item {
-    border-left: 2px solid var(--accent);
+    border-left: 3px solid var(--accent);
     padding-left: 20px;
     margin-bottom: 30px;
 }
