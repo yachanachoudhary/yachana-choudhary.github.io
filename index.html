@@ -1,31 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Yachana | Data Analyst</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#f9fafb;
+--text:#111827;
+--card:#ffffff;
+--accent:#38bdf8;
+}
+
+.dark{
+--bg:#020617;
+--text:#e5e7eb;
+--card:#111827;
+}
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+display:flex;
+background:var(--bg);
+color:var(--text);
+transition:0.3s;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:270px;
+height:100vh;
+background:#0f172a;
+color:white;
+padding:30px;
+position:fixed;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+width:90px;
+border-radius:50%;
+}
+
+.nav-links a{
+display:block;
+margin:12px 0;
+color:#94a3b8;
+text-decoration:none;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+/* CONTENT */
+.content{
+margin-left:270px;
+padding:60px;
+width:100%;
+}
+
+/* CARD */
+.card{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+/* BUTTON */
+.btn{
+background:var(--accent);
+padding:8px 15px;
+border-radius:5px;
+text-decoration:none;
+color:black;
+}
+
+/* TOGGLE */
+.toggle{
+cursor:pointer;
+margin-top:10px;
+}
+
+/* TYPING */
+#typing{
+color:#38bdf8;
+font-weight:600;
+}
+</style>
 </head>
 
 <body>
 
-<nav>
-<div>Yachana</div>
+<!-- SIDEBAR -->
+<div class="sidebar">
+
 <div>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
+<div class="profile">
+<img src="https://via.placeholder.com/100">
+<h3>Yachana</h3>
+<p>Data Analyst</p>
 </div>
-</nav>
 
-<div class="section">
-<h1>Hi, I'm Yachana 👋</h1>
-<h2>Data Analyst</h2>
-<p>Turning data into insights using analytics & machine learning</p>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 
-<a class="btn" href="resume.pdf">Download Resume</a>
+<div class="toggle" onclick="toggleMode()">🌙 Toggle Mode</div>
+</div>
+
+<div>
+<a class="btn" href="resume.pdf">Resume</a>
 <a class="btn" href="https://github.com/yachanachoudhary">GitHub</a>
 </div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<h1>Hi, I'm Yachana 👋</h1>
+<h2 id="typing"></h2>
+
+<!-- ABOUT -->
+<div id="about" class="card">
+<p>
+Data Analyst skilled in Python, SQL, Power BI, Tableau, and Excel.
+</p>
+</div>
+
+<!-- PROJECTS -->
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Walmart Forecasting</h3>
+<a class="btn" href="#">View</a>
+</div>
+
+<div class="card">
+<h3>Advertising Analytics</h3>
+<a class="btn" href="#">View</a>
+</div>
+
+<div class="card">
+<h3>Resume Screening AI</h3>
+<a class="btn" href="#">View</a>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="card">
+<p>Email: yachanachoudhary8@gmail.com</p>
+</div>
+
+</div>
+
+<script>
+// DARK MODE
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+
+// TYPING EFFECT
+const text = ["Data Analyst", "ML Enthusiast", "AI Explorer"];
+let i=0, j=0, current="";
+function type(){
+if(j < text[i].length){
+current += text[i][j];
+document.getElementById("typing").innerText=current;
+j++;
+setTimeout(type,100);
+}
+else{
+setTimeout(()=>{
+current="";
+j=0;
+i=(i+1)%text.length;
+type();
+},1500);
+}
+}
+type();
+</script>
 
 </body>
 </html>
