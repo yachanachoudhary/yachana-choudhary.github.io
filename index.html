@@ -3,41 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Yachana Choudhary | Data Analyst</title>
 
-<!-- FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+<!-- NEW PREMIUM FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=DM+Sans:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-background:#020617;
-color:#e2e8f0;
-font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:#f8fafc;
+font-family:'DM Sans',sans-serif;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 position:fixed;
 width:100%;
 top:0;
-background:#020617;
 padding:15px 10%;
 display:flex;
 justify-content:space-between;
-border-bottom:1px solid #1e293b;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
 
 nav a{
-color:#94a3b8;
+color:#cbd5f5;
 margin-left:20px;
 text-decoration:none;
 transition:0.3s;
 }
 
-nav a:hover{color:#60a5fa;}
+nav a:hover{color:#a78bfa;}
 
 /* HERO */
 .hero{
@@ -50,42 +52,39 @@ text-align:center;
 }
 
 .hero h1{
-font-family:'Space Grotesk';
+font-family:'Outfit';
 font-size:3.5rem;
-color:#60a5fa;
-animation:fadeUp 1s ease forwards;
+color:#a78bfa;
 }
 
 .hero h2{
 margin-top:10px;
-animation:fadeUp 1.3s ease forwards;
+color:#ddd6fe;
 }
 
 .hero p{
 margin-top:15px;
-color:#94a3b8;
+color:#cbd5f5;
 max-width:500px;
-animation:fadeUp 1.6s ease forwards;
 }
 
 /* BUTTON */
 .btn{
 margin-top:20px;
 padding:10px 20px;
-border-radius:8px;
-background:#1e293b;
-color:#60a5fa;
-border:1px solid #334155;
+border-radius:10px;
+background:rgba(255,255,255,0.1);
+color:#a78bfa;
+border:1px solid rgba(255,255,255,0.2);
 text-decoration:none;
 display:inline-block;
 transition:0.3s;
 }
 
 .btn:hover{
-background:#38bdf8;
+background:#a78bfa;
 color:black;
 transform:scale(1.05);
-box-shadow:0 0 15px rgba(56,189,248,0.5);
 }
 
 /* SECTION */
@@ -102,46 +101,45 @@ transform:translateY(0);
 }
 
 .section h2{
-font-family:'Space Grotesk';
-color:#60a5fa;
+font-family:'Outfit';
+color:#a78bfa;
 margin-bottom:20px;
 }
 
 /* CARD */
 .box{
-border:1px solid #1e293b;
+background:rgba(255,255,255,0.05);
 padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-transition:0.4s;
-background:#020617;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+transition:0.3s;
 }
 
 .box:hover{
-border-color:#38bdf8;
 transform:translateY(-5px);
-box-shadow:0 0 15px rgba(56,189,248,0.3);
+border-color:#a78bfa;
+box-shadow:0 0 20px rgba(167,139,250,0.3);
 }
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:15px;
+gap:20px;
 }
 
 /* SKILLS */
 .skills span{
 display:inline-block;
-border:1px solid #334155;
+border:1px solid rgba(255,255,255,0.2);
 padding:8px 12px;
 margin:5px;
 border-radius:6px;
-transition:0.3s;
 }
 
 .skills span:hover{
-background:#38bdf8;
+background:#a78bfa;
 color:black;
 }
 
@@ -149,20 +147,14 @@ color:black;
 img{
 width:100%;
 margin-top:10px;
-border-radius:8px;
+border-radius:10px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-border-top:1px solid #1e293b;
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+border-top:1px solid rgba(255,255,255,0.1);
 }
 </style>
 </head>
@@ -171,7 +163,7 @@ to{opacity:1;transform:translateY(0);}
 
 <!-- NAV -->
 <nav>
-<div style="font-family:'Space Grotesk';">Yachana</div>
+<div style="font-family:'Outfit';color:#a78bfa;">Yachana</div>
 <div>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
@@ -185,77 +177,34 @@ to{opacity:1;transform:translateY(0);}
 <div class="hero">
 <h1>Yachana Choudhary</h1>
 <h2>Data Analyst</h2>
-<p>Turning data into insights using analytics, visualization, and machine learning</p>
+<p>Transforming data into insights using analytics, visualization, and machine learning</p>
 
-<a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
-<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/" target="_blank">LinkedIn</a>
-<a class="btn" href="https://github.com/yachanachoudhary" target="_blank">GitHub</a>
+<a class="btn" href="resume.pdf">Download Resume</a>
+<a class="btn" href="https://www.linkedin.com/in/yachana-choudhary/">LinkedIn</a>
+<a class="btn" href="https://github.com/yachanachoudhary">GitHub</a>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
 <h2>About Me</h2>
 <div class="box">
-<p>
-Data Analyst skilled in Python, SQL, Power BI, Tableau, and Excel. 
-Focused on extracting insights and solving real-world business problems using data.
-</p>
+<p>Data Analyst skilled in Python, SQL, Power BI, Tableau, and Excel.</p>
 </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
 <h2>Projects</h2>
-
 <div class="grid">
 
-<div class="box">
-<h3>Walmart Sales Forecasting</h3>
-<p>Time-series forecasting using Prophet & SARIMAX</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Programmatic Advertising Analytics</h3>
-<p>Analyzed CTR, ROI and built dashboards</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Bias-Aware Resume Screening</h3>
-<p>Fair AI-based hiring system</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>GenAI Knowledge Assistant</h3>
-<p>Enterprise AI assistant</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Zomato Data Analysis</h3>
-<p>Insights on pricing and ratings</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Fitness Data Decision Support</h3>
-<p>Health data insights</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Cancer Diagnostic Modeling</h3>
-<p>ML-based diagnosis system</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
-
-<div class="box">
-<h3>Database Management Interface</h3>
-<p>Python-based interface</p>
-<a class="btn" href="#" target="_blank">View Code</a>
-</div>
+<div class="box">Walmart Sales Forecasting</div>
+<div class="box">Programmatic Advertising Analytics</div>
+<div class="box">Bias-Aware Resume Screening</div>
+<div class="box">GenAI Knowledge Assistant</div>
+<div class="box">Zomato Data Analysis</div>
+<div class="box">Fitness Data Decision Support</div>
+<div class="box">Cancer Diagnostic Modeling</div>
+<div class="box">Database Management Interface</div>
 
 </div>
 </div>
@@ -269,45 +218,37 @@ Focused on extracting insights and solving real-world business problems using da
 <span>Power BI</span>
 <span>Tableau</span>
 <span>Excel</span>
-<span>Machine Learning</span>
 </div>
 </div>
 
 <!-- CERTIFICATE -->
 <div class="section" id="cert">
-<h2>Conference Certificate</h2>
-
+<h2>Certificate</h2>
 <div class="box">
 <img src="certificate.png">
-<a class="btn" href="certificate.png" target="_blank">View Certificate</a>
+<a class="btn" href="certificate.png">View Certificate</a>
 </div>
-
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
 <h2>Contact</h2>
-
 <div class="box">
 <p>Email: yachanachoudhary8@gmail.com</p>
-<p>LinkedIn: https://www.linkedin.com/in/yachana-choudhary/</p>
-<p>GitHub: https://github.com/yachanachoudhary</p>
+<p>LinkedIn: yachana-choudhary</p>
+<p>GitHub: yachanachoudhary</p>
 </div>
-
 </div>
 
 <footer>
 <p>© 2026 Yachana Choudhary</p>
 </footer>
 
-<!-- SCROLL ANIMATION -->
 <script>
-const sections = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-sections.forEach(sec => {
-const offset = sec.offsetTop - 300;
-if(window.scrollY > offset){
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+if(window.scrollY>sec.offsetTop-300){
 sec.classList.add('show');
 }
 });
