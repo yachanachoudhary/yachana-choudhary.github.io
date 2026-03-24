@@ -1,86 +1,78 @@
 :root {
-    --bg-dark: #1a1025; /* Deep Purple Background */
-    --card-bg: #2d1b42; /* Lighter Purple for Cards */
+    --bg-purple: #1a1025; /* Deep Purple Background */
+    --header-purple: #4b0082; /* Header Banner Purple */
     --accent: #a855f7; /* Vibrant Purple Accent */
-    --text-main: #ffffff; /* Pure White Text */
-    --text-dim: #d1d5db; /* Light Gray for subtexts */
+    --text-white: #ffffff;
+    --text-dim: #d1d5db;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-purple);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
     margin: 0;
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Navigation Menu */
 .nav-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background: #120a1c;
+    padding: 1.2rem 10%;
+    background: rgba(26, 16, 37, 0.98);
     border-bottom: 2px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-container ul { display: flex; list-style: none; margin: 0; }
-.nav-container li { margin-left: 25px; }
-.nav-container a { 
-    color: var(--text-main); 
-    text-decoration: none; 
-    font-weight: 600; 
-    transition: color 0.3s;
-}
+.nav-container ul { display: flex; list-style: none; gap: 25px; margin: 0; }
+.nav-container a { color: var(--text-white); text-decoration: none; font-weight: 600; }
 .nav-container a:hover { color: var(--accent); }
 
-/* Containers */
-.container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-
-/* Accordion Component */
-.accordion {
-    background-color: var(--card-bg);
-    color: var(--text-main);
-    cursor: pointer;
-    padding: 20px;
-    width: 100%;
-    border: 1px solid var(--accent);
-    text-align: left;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+/* Header Banner */
+.header-purple {
+    background-color: var(--header-purple);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.accordion:hover, .active {
-    background-color: var(--accent);
-    color: white;
+/* Containers & Grid */
+.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 10%;
+    font-size: 0.85rem;
+    color: var(--text-dim);
 }
 
-.panel {
-    background-color: rgba(255, 255, 255, 0.05);
-    max-height: 0;
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--text-white);
+    color: #333;
+    border-radius: 10px;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    border-radius: 0 0 8px 8px;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-.panel-content { padding: 20px; color: var(--text-dim); }
-
-/* Skills & Timeline */
-.skill-badge {
+.card-tag {
     background: var(--accent);
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 15px;
     display: inline-block;
-    margin: 5px;
-    font-size: 0.9rem;
-}
-
-.timeline-item {
-    border-left: 3px solid var(--accent);
-    padding-left: 20px;
-    margin-bottom: 30px;
+    margin-top: -10px;
+    position: relative;
 }
